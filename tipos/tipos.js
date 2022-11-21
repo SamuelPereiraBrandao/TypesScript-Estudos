@@ -156,3 +156,4 @@ let Correntista = {
 };
 Correntista.ContaBancaria.depositar(90000);
 console.log(Correntista);
+//# sourceMappingURL=tipos.js.map
