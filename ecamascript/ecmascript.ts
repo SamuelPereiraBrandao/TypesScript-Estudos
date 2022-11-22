@@ -123,7 +123,43 @@ tuplaParam2(...tupla)
 
 // destructuring (Array)
 
+const caracteristicas = ['Motor Zetec 1.8', 2020];
 
+//const motor = caracteristica[0]
+//const motor = caracteristica[1]
+
+const [motor, ano] = caracteristicas
+console.log(motor)
+console.log(ano)
+
+
+// destructuring (objeto)
+console.log('//////////////////')
+
+const item = {
+    nome:'SSD 480GB',
+    preco:275,
+    caracteristicas:{
+        w:'Importado'
+    }
+
+}
+
+/* const nomeItem = item.nome
+const preco = item.preco */
+
+
+
+console.log('//////////////////')
+
+const usuarioID: string = 'SuporteCod3r'
+const notificacoes: string = '19'
+const boasVindas = `
+Boas Vindas ${usuarioID},
+Notificações: ${parseInt(notificacoes) > 9 ? '+9' :notificacoes}
+`
+console.log(boasVindas)
+console.log(`${caracteristicas[0]}`)
 
 
 
