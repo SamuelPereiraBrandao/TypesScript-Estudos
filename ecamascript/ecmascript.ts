@@ -163,6 +163,8 @@ console.log(`${caracteristicas[0]}`)
 
 
 
+console.log('//////////////////')
 
 
-
+const nums = [-3, 33, 38, 5]
+console.log('oi')

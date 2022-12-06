@@ -108,4 +108,7 @@ Notificações: ${parseInt(notificacoes) > 9 ? '+9' : notificacoes}
 `;
 console.log(boasVindas);
 console.log(`${caracteristicas[0]}`);
+console.log('//////////////////');
+const nums = [-3, 33, 38, 5];
+console.log('oi');
 //# sourceMappingURL=ecmascript.js.map
