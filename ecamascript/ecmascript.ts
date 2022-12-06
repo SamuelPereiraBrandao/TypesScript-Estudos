@@ -148,8 +148,6 @@ const item = {
 /* const nomeItem = item.nome
 const preco = item.preco */
 
-
-
 console.log('//////////////////')
 
 const usuarioID: string = 'SuporteCod3r'
@@ -161,10 +159,7 @@ Notificações: ${parseInt(notificacoes) > 9 ? '+9' :notificacoes}
 console.log(boasVindas)
 console.log(`${caracteristicas[0]}`)
 
-
-
 console.log('//////////////////')
-
 
 const nums = [-3, 33, 38, 5]
 console.log('oi')
