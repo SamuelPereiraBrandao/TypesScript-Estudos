@@ -45,32 +45,80 @@ prod1.desconto = 0.06;
 console.log(prod1.resumo());
 const prod2 = new Produto('Caderno Escolar', 18.80, 0.15);
 console.log(prod2.resumo());
-class Carro {
-    constructor(marca, modelo, velocidadeMaxima = 200) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.velocidadeMaxima = velocidadeMaxima;
-        this.velocidadeAtual = 0;
+/* class Carro {
+    private velocidadeAtual: number = 0
+    constructor(public marca:string, public modelo:string, private velocidadeMaxima: number = 200){
     }
-    alterarVelocidade(delta) {
-        const novaVelocidade = this.velocidadeAtual + delta;
-        const velocidadeValida = novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima;
-        if (velocidadeValida) {
-            this.velocidadeAtual = novaVelocidade;
-        }
-        else {
+    private alterarVelocidade (delta:number):any {
+        const novaVelocidade = this.velocidadeAtual + delta
+        const velocidadeValida = novaVelocidade >= 0 && novaVelocidade <= this.velocidadeMaxima
+        if(velocidadeValida){
+            this.velocidadeAtual = novaVelocidade
+        }else {
+            this.velocidadeAtual = delta > 0 ? this.velocidadeMaxima
         }
     }
-    acelerar() {
-        return this.alterarVelocidade(5);
+    public acelerar(): number {
+        return this.alterarVelocidade(5)
     }
-    freiar() {
-        return this.alterarVelocidade(-5);
+    public freiar(): number {
+        return this.alterarVelocidade(-5)
     }
 }
-const carro1 = new Carro('Ford', 'Ka', 185);
-console.log(carro1.acelerar());
-console.log(carro1.acelerar());
-console.log(carro1.acelerar());
-console.log(carro1.acelerar());
+
+const carro1 = new Carro('Ford','Ka', 185)
+
+Array(50).fill(0).forEach(() => carro1.acelerar())
+console.log(carro1.acelerar)
+
+Array(50).fill(0).forEach(() => carro1.freiar())
+console.log(carro1.freiar)
+
+// simular erros
+carro1.velocidadeAtual = 300;
+console.log('atual ->' + carro1.velocidadeAtual)
+
+carro1.velocidadeMaxima = 300;
+console.log('atual ->' + carro1.velocidadeMxim)
+
+class Ferrari extends Carro {
+}
+const f40 = new Ferrari ('Ferrari','F40',324)
+console.log(`${f40.marca} ${f40.modelo}`)
+*/
+// atributos e métodos estáticos
+class Matematica {
+    static areaCirc(raio) {
+        return this.PI * raio * raio;
+    }
+}
+Matematica.PI = 3.1416;
+console.log(Matematica.areaCirc(4));
+/* const m1 = new Matematica()
+console.log(m1.areaCirc(4))
+const m2 = new Matematica()
+m1.PI = 4.2
+console.log(m1.areaCirc(4)) */
+// classe abstrata
+class Calculo {
+    constructor() {
+        this.resultado = 0;
+    }
+    getResultado() {
+        return this.resultado;
+    }
+}
+class Soma extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((t, a) => t + a);
+    }
+}
+class Multiplicacao extends Calculo {
+    executar(...numeros) {
+        this.resultado = numeros.reduce((t, a) => t * a);
+    }
+}
+let c1 = new Multiplicacao();
+c1.executar(2, 3, 4, 5, 10, 99999999999999999);
+console.log(c1.getResultado());
 //# sourceMappingURL=classes.js.map
