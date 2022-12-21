@@ -181,6 +181,7 @@ const moto = new Moto('Ducati')
 moto.buzinar()
 console.log(moto.velocidade)
 moto.acelerar(30)
+
 console.log(moto.velocidade)
 
 
