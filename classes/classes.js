@@ -121,4 +121,16 @@ class Multiplicacao extends Calculo {
 let c1 = new Multiplicacao();
 c1.executar(2, 3, 4, 5, 10, 99999999999999999);
 console.log(c1.getResultado());
+class Unico {
+    constructor() { }
+    static getInstance() {
+        return Unico.instance;
+    }
+    agora() {
+        return new Date;
+    }
+}
+Unico.instance = new Unico;
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 //# sourceMappingURL=classes.js.map

@@ -139,3 +139,84 @@ abstract class Calculo {
 let c1 = new Multiplicacao()
 c1.executar(2,3,4,5,10,99999999999999999)
 console.log(c1.getResultado())
+
+
+class Unico {
+    private static instance: Unico = new Unico
+    private constructor(){}
+
+    static getInstance(): Unico{
+        return Unico.instance
+    }
+    agora() {
+        return new Date
+    }
+} 
+
+
+////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////
+
+
+// Exercício 1 - Classe
+ 
+class Moto {
+    public velocidade: number = 0
+
+    constructor(public nome:string){
+     
+
+    }
+
+    buzinar(){
+        console.log('Thoouhht!')
+     }
+
+    acelerar(delta: number){
+        this.velocidade = this.velocidade + delta
+    }
+}
+
+const moto = new Moto('Ducati')
+moto.buzinar()
+console.log(moto.velocidade)
+moto.acelerar(30)
+console.log(moto.velocidade)
+ 
+ 
+// Exercício 3 - Getters & Setters
+var estagiario = {
+    _primeiroNome: ''
+}
+ 
+Object.defineProperty(estagiario, 'primeiroNome', {
+    get: function () {
+        return this._primeiroNome
+    },
+    set: function (valor) {
+        if (valor.length >= 3) {
+            this._primeiroNome = valor
+        } else {
+            this._primeiroNome = ''
+        }
+    },
+    enumerable: true,
+    configurable: true
+})
+ 
+console.log(estagiario.primeiroNome)
+estagiario.primeiroNome = 'Le'
+console.log(estagiario.primeiroNome)
+estagiario.primeiroNome = 'Leonardo'
+console.log(estagiario.primeiroNome)
+
+
+
+
+
+
+
+
+
+
