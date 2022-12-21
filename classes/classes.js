@@ -133,4 +133,21 @@ class Unico {
 Unico.instance = new Unico;
 ////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
+class Moto {
+    constructor(nome) {
+        this.nome = nome;
+        this.velocidade = 0;
+    }
+    buzinar() {
+        console.log('Thoouhht!');
+    }
+    acelerar(delta) {
+        this.velocidade = this.velocidade + delta;
+    }
+}
+const moto = new Moto('Ducati');
+moto.buzinar();
+console.log(moto.velocidade);
+moto.acelerar(30);
+console.log(moto.velocidade);
 //# sourceMappingURL=classes.js.map
