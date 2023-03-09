@@ -185,7 +185,17 @@ moto.acelerar(30)
 console.log(moto.velocidade)
 
 
+namespace Areas {
+    const PI = 3.14
+    function areaCircunferencial(raio:number):number {
+        return PI * Math.pow(raio,2)
 
+    }
+    function areaRetangulo(base:number, altura: number):number {
+        return base * altura
+    }
+    console.log(areaCircunferencial(100))
+}
 
 
 
