@@ -1,33 +1,36 @@
-namespace Areas {
-   export const PI = 3.14
-   export const X1 = 4
-    
-    export function areaCircunferencial (raio: number): number{
-        return PI * Math.pow(raio,2)
-    }
-    
-    
-   export function areaRetangulo (base: number, altura:number):number{
-        return base * altura
-    }
+namespace Geometria {
+    export namespace Areas {
+        export const PI = 3.14
+        export const X1 = 4
+         
+         export function areaCircunferencial (raio: number): number{
+             return PI * Math.pow(raio,2)
+         }
+         
+         
+        export function areaRetangulo (base: number, altura:number):number{
+             return base * altura
+         }
+     }
 }
 
 
 
-console.log(Areas.areaCircunferencial(10))
+
+console.log(Geometria.Areas.areaCircunferencial(10))
 console.log("teste")
 
 
 function somarTudo(Somar:number):number{
 
-    return Areas.PI + Somar
+    return Geometria.Areas.PI + Somar
 }
 
 console.log(somarTudo(10))
 
 
 function Teste(xT:number):number{
-    return Areas.X1 - xT
+    return Geometria.Areas.X1 - xT
 }
 
 function Teste2(yT:number):number {
@@ -55,12 +58,12 @@ app?.appendChild(hr)
 
 
 const divprin = document.getElementById("divprincipal")
-    const SomarPI = Areas.X1 + Areas.PI
+    const SomarPI = Geometria.Areas.X1 + Geometria.Areas.PI
 
 
 if(SomarPI == 7.140000000000001){
     const paragrafo = document.createElement("p")
-    paragrafo.textContent = "PI("+Areas.PI+")"+" + NÚMERO (" +Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
+    paragrafo.textContent = "PI("+Geometria.Areas.PI+")"+" + NÚMERO (" +Geometria.Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
     app.appendChild(paragrafo)
 }else {
     const paragrafo = document.createElement("p")
@@ -79,8 +82,8 @@ if (input != null) {
 
 input?.addEventListener('input', function (event) {
   const target = event.target as HTMLInputElement;
-  const paragrafo = document.createElement("p")
-  paragrafo.textContent = "Número:"+target.value;
+  const paragrafo = document.createElement("h1")
+  paragrafo.textContent = "N:"+target.value;
   app.appendChild(paragrafo)
 });
 

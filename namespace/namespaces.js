@@ -1,24 +1,27 @@
-var Areas;
-(function (Areas) {
-    Areas.PI = 3.14;
-    Areas.X1 = 4;
-    function areaCircunferencial(raio) {
-        return Areas.PI * Math.pow(raio, 2);
-    }
-    Areas.areaCircunferencial = areaCircunferencial;
-    function areaRetangulo(base, altura) {
-        return base * altura;
-    }
-    Areas.areaRetangulo = areaRetangulo;
-})(Areas || (Areas = {}));
-console.log(Areas.areaCircunferencial(10));
+var Geometria;
+(function (Geometria) {
+    var Areas;
+    (function (Areas) {
+        Areas.PI = 3.14;
+        Areas.X1 = 4;
+        function areaCircunferencial(raio) {
+            return Areas.PI * Math.pow(raio, 2);
+        }
+        Areas.areaCircunferencial = areaCircunferencial;
+        function areaRetangulo(base, altura) {
+            return base * altura;
+        }
+        Areas.areaRetangulo = areaRetangulo;
+    })(Areas = Geometria.Areas || (Geometria.Areas = {}));
+})(Geometria || (Geometria = {}));
+console.log(Geometria.Areas.areaCircunferencial(10));
 console.log("teste");
 function somarTudo(Somar) {
-    return Areas.PI + Somar;
+    return Geometria.Areas.PI + Somar;
 }
 console.log(somarTudo(10));
 function Teste(xT) {
-    return Areas.X1 - xT;
+    return Geometria.Areas.X1 - xT;
 }
 function Teste2(yT) {
     return 1000 - yT;
@@ -39,10 +42,10 @@ p.textContent = "teste " + Marcacoes.somarP(4) + hr.textContent + " mais texto";
 app === null || app === void 0 ? void 0 : app.appendChild(p);
 app === null || app === void 0 ? void 0 : app.appendChild(hr);
 var divprin = document.getElementById("divprincipal");
-var SomarPI = Areas.X1 + Areas.PI;
+var SomarPI = Geometria.Areas.X1 + Geometria.Areas.PI;
 if (SomarPI == 7.140000000000001) {
     var paragrafo = document.createElement("p");
-    paragrafo.textContent = "PI(" + Areas.PI + ")" + " + NÚMERO (" + Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
+    paragrafo.textContent = "PI(" + Geometria.Areas.PI + ")" + " + NÚMERO (" + Geometria.Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
     app.appendChild(paragrafo);
 }
 else {
@@ -58,8 +61,8 @@ if (input != null) {
 }
 input === null || input === void 0 ? void 0 : input.addEventListener('input', function (event) {
     var target = event.target;
-    var paragrafo = document.createElement("p");
-    paragrafo.textContent = "Número:" + target.value;
+    var paragrafo = document.createElement("h1");
+    paragrafo.textContent = "N:" + target.value;
     app.appendChild(paragrafo);
 });
 // 1. Seleciona o elemento div usando a propriedade id
