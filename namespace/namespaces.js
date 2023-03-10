@@ -1,7 +1,7 @@
 var Areas;
 (function (Areas) {
     Areas.PI = 3.14;
-    Areas.X1 = 4000;
+    Areas.X1 = 4;
     function areaCircunferencial(raio) {
         return Areas.PI * Math.pow(raio, 2);
     }
@@ -38,4 +38,16 @@ var hr = document.createElement("hr");
 p.textContent = "teste " + Marcacoes.somarP(4) + hr.textContent + " mais texto";
 app === null || app === void 0 ? void 0 : app.appendChild(p);
 app === null || app === void 0 ? void 0 : app.appendChild(hr);
+var divprin = document.getElementById("divprincipal");
+var SomarPI = Areas.X1 + Areas.PI;
+if (SomarPI == 7.140000000000001) {
+    var paragrafo = document.createElement("p");
+    paragrafo.textContent = "PI(" + Areas.PI + ")" + "+ NÚMERO(" + Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
+    app.appendChild(paragrafo);
+}
+else {
+    var paragrafo = document.createElement("p");
+    paragrafo.textContent = "NÚMERO INVÁLIDO!";
+    app.appendChild(paragrafo);
+}
 // 1. Seleciona o elemento div usando a propriedade id

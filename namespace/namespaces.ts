@@ -1,6 +1,6 @@
 namespace Areas {
    export const PI = 3.14
-   export const X1 = 4000
+   export const X1 = 4
     
     export function areaCircunferencial (raio: number): number{
         return PI * Math.pow(raio,2)
@@ -55,9 +55,19 @@ app?.appendChild(hr)
 
 
 
+const divprin = document.getElementById("divprincipal")
+    const SomarPI = Areas.X1 + Areas.PI
 
 
-
+if(SomarPI == 7.140000000000001){
+    const paragrafo = document.createElement("p")
+    paragrafo.textContent = "PI("+Areas.PI+")"+"+ NÚMERO(" +Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
+    app.appendChild(paragrafo)
+}else {
+    const paragrafo = document.createElement("p")
+    paragrafo.textContent = "NÚMERO INVÁLIDO!";
+    app.appendChild(paragrafo)
+}
 
 
 
