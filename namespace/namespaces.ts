@@ -54,14 +54,13 @@ app?.appendChild(p)
 app?.appendChild(hr)
 
 
-
 const divprin = document.getElementById("divprincipal")
     const SomarPI = Areas.X1 + Areas.PI
 
 
 if(SomarPI == 7.140000000000001){
     const paragrafo = document.createElement("p")
-    paragrafo.textContent = "PI("+Areas.PI+")"+"+ NÚMERO(" +Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
+    paragrafo.textContent = "PI("+Areas.PI+")"+" + NÚMERO (" +Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
     app.appendChild(paragrafo)
 }else {
     const paragrafo = document.createElement("p")
@@ -69,6 +68,20 @@ if(SomarPI == 7.140000000000001){
     app.appendChild(paragrafo)
 }
 
+const input = document.getElementById('message') as HTMLInputElement | null;
 
+const value = input?.value;
+console.log(value) // 👉️ "Initial value"
+
+if (input != null) {
+  console.log(input.value); // 👉️ "Initial value"
+}
+
+input?.addEventListener('input', function (event) {
+  const target = event.target as HTMLInputElement;
+  const paragrafo = document.createElement("p")
+  paragrafo.textContent = "Número:"+target.value;
+  app.appendChild(paragrafo)
+});
 
 // 1. Seleciona o elemento div usando a propriedade id

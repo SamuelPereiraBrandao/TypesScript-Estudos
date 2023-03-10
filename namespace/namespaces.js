@@ -42,7 +42,7 @@ var divprin = document.getElementById("divprincipal");
 var SomarPI = Areas.X1 + Areas.PI;
 if (SomarPI == 7.140000000000001) {
     var paragrafo = document.createElement("p");
-    paragrafo.textContent = "PI(" + Areas.PI + ")" + "+ NÚMERO(" + Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
+    paragrafo.textContent = "PI(" + Areas.PI + ")" + " + NÚMERO (" + Areas.X1 + ") QUE VAI RESULTAR EM: " + SomarPI;
     app.appendChild(paragrafo);
 }
 else {
@@ -50,4 +50,16 @@ else {
     paragrafo.textContent = "NÚMERO INVÁLIDO!";
     app.appendChild(paragrafo);
 }
+var input = document.getElementById('message');
+var value = input === null || input === void 0 ? void 0 : input.value;
+console.log(value); // 👉️ "Initial value"
+if (input != null) {
+    console.log(input.value); // 👉️ "Initial value"
+}
+input === null || input === void 0 ? void 0 : input.addEventListener('input', function (event) {
+    var target = event.target;
+    var paragrafo = document.createElement("p");
+    paragrafo.textContent = "Número:" + target.value;
+    app.appendChild(paragrafo);
+});
 // 1. Seleciona o elemento div usando a propriedade id
