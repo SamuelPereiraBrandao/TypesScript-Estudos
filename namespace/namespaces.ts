@@ -16,7 +16,7 @@ namespace Geometria {
 
 
 
-
+console.log(Geometria.Areas.areaRetangulo(4,5))
 console.log(Geometria.Areas.areaCircunferencial(10))
 console.log("teste")
 
@@ -88,3 +88,4 @@ input?.addEventListener('input', function (event) {
 });
 
 // 1. Seleciona o elemento div usando a propriedade id
+
