@@ -87,5 +87,3 @@ input?.addEventListener('input', function (event) {
   app.appendChild(paragrafo)
 });
 
-// 1. Seleciona o elemento div usando a propriedade id
-
